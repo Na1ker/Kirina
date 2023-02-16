@@ -1,0 +1,170 @@
+/**
+ * Test
+ */
+public class Zad1 {
+
+    public static void main(String[] args) {
+        
+        int [] Array = {1,3,2,4,6,1,3,2,5};
+
+        int p = 1;
+
+
+        for (int i = 0; i < Array.length; i++) {  //Выводит произведение массива
+            p = p * Array[i];
+            
+        }
+
+        System.out.println(p);
+
+    }
+}
+public class Zad2 {
+    
+    public static void main(String[] args) {
+
+        int[] Array = {1,2,4,1,12,4,54,1,2,4,6,6,75,43,47,898,0,5};
+
+        for (int i = 0; i < Array.length; i++) {  //Выводит массив в котором числа нечетные числа
+
+            if(i % 2 != 0)
+                System.out.println(i);
+
+            
+        }
+        
+    }
+}
+
+public class Zad3 {
+
+    public static void main(String[] args) {
+        
+        int[] Array = {1,4,3,6,5,15,63,99,999,9,12,15};
+
+        int k = 0;
+
+        for (int i = 0; i < Array.length; i++) { // Выводит массив который считает количество элементов кратные 3 
+
+            System.out.println(Array[i]);
+
+            if (Array[i] % 3 == 0 )
+                k++;
+        }
+
+            System.out.println("Числа кратные 3 = "+ k); 
+    }    
+
+    
+}
+
+
+import java.util.Arrays;
+
+public class Zad4 {
+    
+    public static void main(String[] args) {
+        
+        int [] mas = {1,32,12,32,54,56,5,1,12,3,45,67,90,89,8,7,6,5,4,32,21};
+        
+        System.out.println("Не отсортированный массив:");   // Выводит массив
+        for (int i : mas) {
+
+            System.out.print(i + " ");
+        }
+        
+        
+        System.out.println("\nОтсорированный массив");
+
+        Arrays.sort(mas);
+
+        for (int i : mas) {
+            System.out.print(i + " ");
+        }
+        
+            
+
+        
+    }
+}
+
+import java.util.Arrays;
+
+public class Zad5 {
+    
+    public static void main(String[] args) {
+        
+        int[] mas = {-1,-4,-1-61,0,1,54,12,7,0,0,3,21,43,12,65,2,5,4,7};
+
+        System.out.println("Не отсортированный массив:"); //Выводим массив
+            for (int i : mas) {
+            
+            System.out.print(i + " ");
+        }
+
+        Arrays.sort(mas);
+        System.out.println("\nОтсортированный масив:");
+            for (int i : mas) {
+                System.out.print(i + " ");
+            }
+
+        
+
+
+    }
+}
+
+import java.util.Arrays;
+public class Zad6 {
+    public static void main(String[] args) {
+        
+        int[][] mas = {{-2,2,3}, {-1,-1,5}, {1,2,-2}}; //Объявляем матрицу и присваиваем ей числа
+        
+        for (int i = 0; i < mas.length; i++) {
+            System.out.println(Arrays.toString(mas[i]));  // Вывод матрицы
+        }  
+        
+        int a = mas[0][2] * mas[1][1] * mas[2][0];
+        System.out.println("Произвидение побочной диагонали = " + a); // Вывод произведения побочной диагонали
+        
+        int result = 0;
+            for (int i = 0; i < mas.length; ++i){
+                for (int j = 0; j < i; ++j){
+                    if (mas[i][j] >= 0){
+                        result++;
+                    }
+                }
+            }
+            System.out.println("Количество чисел  = " + result);
+        }
+    }
+
+import java.util.Arrays;
+
+public class Zad7 {
+
+    public static void main(String[] args) {
+        
+        int [][] list = {{1,4,2,7}, {2,4,5,2}};
+
+        for (int i = 0; i < list.length; i++)  {
+            
+            System.out.println(Arrays.toString(list[i]));
+        }
+
+        int min = 0;
+        for (int i = 0; i < list[0].length; ++i){
+            min = list[i][i];
+            for (int j = 0; j < list.length; ++j){
+                if (list[j][i] < min){
+                    min = list[j][i];
+                }
+                // System.out.println(list[j][i]);
+            }
+            System.out.println("Минимальное значение " + (i + 1) + " столбца: " + min); // Выводит минимальное значение матрицы 
+        }
+        
+    }
+ }
+    
+
