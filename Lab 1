@@ -1,0 +1,72 @@
+class Main {
+    public static void main(String[] args) {
+        
+        double x = 16.55 * Math.pow(10, -3); 
+        double y = -2.75;
+        double z = 0.15;
+        double b;
+
+        
+
+        // double q = Math.sqrt(10 * (Math.pow(x, 1/3) + Math.pow(x, y + 2) ));
+        // double w = (Math.pow(Math.asin(z), 2));
+        // double e = Math.abs(x - y);
+
+        // b = q * w - e;
+
+
+        b = Math.abs(Math.sqrt(10 * (Math.cbrt(x) + Math.pow(x, y + 2) )) * (Math.asin(z) * Math.asin(z) - (Math.abs(x - y))));
+    System.out.println(b);  // Линейные операции
+    
+
+
+    }
+}
+import java.util.Scanner;
+
+public class Main2 {
+    
+    public static void main(String[] args) {
+
+        Scanner key = new Scanner(System.in); // Объявляем сканер
+            double x = key.nextDouble();
+            double y = key.nextDouble();
+
+            if(x > Math.abs(y))
+                System.out.println(2 * Math.pow(x, 3) + (3 * Math.pow(y, 2)));
+                else if(3 < x && x < Math.abs(y))
+                    System.out.println(Math.abs(x - y));
+                    else
+                        System.out.println(Math.cbrt(Math.abs(x-y)));
+        
+            key.close();  // разветвляющихся алгоритмов
+
+    }
+}
+
+public class Main3 {
+
+    public static void main(String[] args) {
+
+        double y,a,b,h,x,n;
+        double k = 20;
+
+        a = 0.1; b = 1.2; h = 0.1; x = a;
+
+        do {
+          y = 0;
+            for(n = 1;n < k; n++)
+            y = ((2 * n + 1) / Math.asin(n * x)) * Math.pow(x,n -1);
+                System.out.println("Шаг=" + x);
+                System.out.println("Значение выражения=" + y); //циклических алгоритмов.
+            x += h;
+
+        } while (x <= b);
+
+
+
+
+        
+    }
+    
+}
